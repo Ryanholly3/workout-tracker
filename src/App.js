@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
+import Login from './components/Login';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state= {
+      users: [],
+      currentUser: [],
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <div className="nav-bar">
-
+          <Login />
         </div>
       </div>
     );
