@@ -13,8 +13,22 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="login">
-        <h1>LOGIN</h1>
+      <div className="login-page">
+        <div className="login-box">
+          <form className= "center">
+            <h1>Login</h1>
+            <p>Username</p>
+            <select>
+              <option value="user1">Ryan</option>
+              <option value="user2">Stephan</option>
+              <option value="user3">Logan</option>
+              <option value="user4">Mark</option>
+            </select>
+            <p>Password</p>
+            <input type="text" />
+            <input className="block" type="submit"/>
+          </form>
+        </div>
       </div>
     );
   }
