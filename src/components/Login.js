@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Button } from 'semantic-ui-react'
+import { Select } from 'semantic-ui-react'
+import { users } from '../users'
 import '../App.css';
 
 class Login extends Component {
@@ -18,18 +21,14 @@ class Login extends Component {
           <form className= "center">
             <h1>Login</h1>
             <p>Username</p>
-            <select>
-              <option value="user1">Ryan</option>
-              <option value="user2">Stephan</option>
-              <option value="user3">Logan</option>
-              <option value="user4">Mark</option>
-            </select>
+            <Select placeholder='Select User' options={users} />
+            <div className="ui divider" />
             <p>Password</p>
             <div className='ui input'>
               <input type='text' placeholder="Enter Password..." />
             </div>
             <div className="ui divider" />
-            <button className='ui big button'>Go!</button>
+            <Button color='blue' className='ui big button'>Go!</Button>
           </form>
         </div>
       </div>

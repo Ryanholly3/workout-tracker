@@ -28,12 +28,12 @@ class App extends Component {
 const RouterEx = () => (
   <Router>
     <div>
-      <nav className="navbar navbar-dark bg-primary">
-        <Link to="/" className="navbar-brand">Login</Link>
-        <Link to="/swim" className="navbar-brand">Swim</Link>
-        <Link to="/bike" className="navbar-brand">Bike</Link>
-        <Link to="/run" className="navbar-brand">Run</Link>
-        <Link to="/profile" className="navbar-brand">Profile</Link>
+      <nav>
+        <Link to="/">Login</Link>
+        <Link to="/swim">Swim</Link>
+        <Link to="/bike">Bike</Link>
+        <Link to="/run">Run</Link>
+        <Link to="/profile">Profile</Link>
       </nav>
       <Route exact path="/" component={App}/>
       <Route exact path="/swim" component={SwimSummary}/>
