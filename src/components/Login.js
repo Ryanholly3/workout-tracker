@@ -25,8 +25,11 @@ class Login extends Component {
               <option value="user4">Mark</option>
             </select>
             <p>Password</p>
-            <input type="text" />
-            <input className="block" type="submit"/>
+            <div className='ui input'>
+              <input type='text' placeholder="Enter Password..." />
+            </div>
+            <div className="ui divider" />
+            <button className='ui big button'>Go!</button>
           </form>
         </div>
       </div>
