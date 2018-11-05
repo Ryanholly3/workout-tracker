@@ -11,18 +11,14 @@ class SwimSummary extends Component {
   render() {
     return (
       <Container>
+        <div>
+          <Image src='https://via.placeholder.com/150' avatar />
+          <span>USERNAME</span>
+        </div>
+        <h2>Swimming</h2>
         <div className="swim-summary">
-          <div className="swim-list">
-            <div>
-              <Image src='https://via.placeholder.com/150' avatar />
-              <span>USERNAME</span>
-            </div>
-            <h2>Swimming</h2>
-            <SwimList />
-          </div>
-          <div className="swim-input">
-            <SwimInput />
-          </div>
+          <SwimList />
+          <SwimInput />
         </div>
       </Container>
     );
