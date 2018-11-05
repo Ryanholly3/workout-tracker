@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Button } from 'semantic-ui-react'
-import { Select } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react';
+import { Select } from 'semantic-ui-react';
 import { users } from '../users'
 import '../App.css';
 
 class Login extends Component {
-  constructor(props){
-    super(props);
-    this.state= {
-      users: [],
-      currentUser: [],
-    }
-  }
 
   render() {
     return (
       <div className="login-page">
-        <div className="login-box">
+        <div className="ui raised segment login-box">
           <form className= "center">
-            <h1>Login</h1>
+            <h1>Workout Tracker</h1>
             <p>Username</p>
             <Select placeholder='Select User' options={users} />
             <div className="ui divider" />

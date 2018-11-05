@@ -5,6 +5,8 @@ import SwimSummary from './components/swim/SwimSummary';
 import BikeSummary from './components/bike/BikeSummary';
 import RunSummary from './components/run/RunSummary';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react'
 import './App.css';
 
 class App extends Component {
@@ -19,29 +21,42 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Login />
+        <Router>
+          <div>
+            <Menu color="blue" inverted >
+              <Menu.Item as={ Link } name='Login' to='/'>
+                <Icon name='user' />
+                Login
+              </Menu.Item>
+              <Menu.Item as={ Link } name='Profile' to='/profile'>
+                <Icon name='user' />
+                Profile
+              </Menu.Item>
+              <Menu.Menu position="right">
+                <Menu.Item as={ Link } name='Swim' to='/swim'>
+                  <Icon name='user' />
+                  Swim
+                </Menu.Item>
+                <Menu.Item as={ Link } name='Bike' to='/bike'>
+                  <Icon name='user' />
+                  Bike
+                </Menu.Item>
+                <Menu.Item as={ Link } name='Run' to='/run'>
+                  <Icon name='user' />
+                  Run
+                </Menu.Item>
+              </Menu.Menu>
+            </Menu>
+            <Route exact path="/" component={Login}/>
+            <Route exact path="/swim" component={SwimSummary}/>
+            <Route exact path="/bike" component={BikeSummary}/>
+            <Route exact path="/run" component={RunSummary}/>
+            <Route exact path="/profile" component={Profile}/>
+          </div>
+        </Router>
       </div>
     );
   }
 }
 
-const RouterEx = () => (
-  <Router>
-    <div>
-      <nav>
-        <Link to="/">Login</Link>
-        <Link to="/swim">Swim</Link>
-        <Link to="/bike">Bike</Link>
-        <Link to="/run">Run</Link>
-        <Link to="/profile">Profile</Link>
-      </nav>
-      <Route exact path="/" component={App}/>
-      <Route exact path="/swim" component={SwimSummary}/>
-      <Route exact path="/bike" component={BikeSummary}/>
-      <Route exact path="/run" component={RunSummary}/>
-      <Route exact path="/profile" component={Profile}/>
-    </div>
-  </Router>
-)
-
-export default RouterEx;
+export default App;
