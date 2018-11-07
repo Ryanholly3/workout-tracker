@@ -15,7 +15,7 @@ class SwimList extends Component {
                 <Table.HeaderCell width='one' >Number</Table.HeaderCell>
                 <Table.HeaderCell width='two' >Date</Table.HeaderCell>
                 <Table.HeaderCell width='three' >Distance</Table.HeaderCell>
-                <Table.HeaderCell width='six' >Other</Table.HeaderCell>
+                <Table.HeaderCell width='six' >Notes</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
 
@@ -33,6 +33,7 @@ class SwimList extends Component {
                 <Table.Cell>Great swim!</Table.Cell>
               </Table.Row>
             </Table.Body>
+            
             <Table.Footer>
               <Table.Row>
                 <Table.HeaderCell colSpan='4'>

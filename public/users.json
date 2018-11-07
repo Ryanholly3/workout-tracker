@@ -1,0 +1,135 @@
+{
+  "users": [{
+    "id": 1,
+    "name": "Ryan",
+    "age": 26,
+    "gender": "male",
+    "swims": [
+      {
+        "date": "11/6/18",
+        "distance": 3000,
+        "difficulty": 8,
+        "notes": "ryan - terrible swim..."
+      },{
+        "date": "11/7/18",
+        "distance": 3500,
+        "difficulty": 8,
+        "notes": "ryan - Great swim..."
+      }
+    ],
+    "bikes": [
+      {
+        "date": "11/6/18",
+        "distance": 10000,
+        "difficulty": 3,
+        "notes": "ryan - terrible bike..."
+      },{
+        "date": "11/7/18",
+        "distance": 30000,
+        "difficulty": 4,
+        "notes": "ryan - Great bike..."
+      }
+    ],
+    "runs": [
+      {
+        "date": "11/6/18",
+        "distance": 5000,
+        "difficulty": 10,
+        "notes": "ryan - terrible run..."
+      },{
+        "date": "11/7/18",
+        "distance": 6000,
+        "difficulty": 4,
+        "notes": "ryan - Great run..."
+      }
+    ]
+  },{
+    "id": 2,
+    "name": "Logan",
+    "age": 25,
+    "gender": "male",
+    "swims": [
+      {
+        "date": "11/6/18",
+        "distance": 3000,
+        "difficulty": 8,
+        "notes": "logan - terrible swim..."
+      },{
+        "date": "11/7/18",
+        "distance": 3500,
+        "difficulty": 8,
+        "notes": "logan - Great swim..."
+      }
+    ],
+    "bikes": [
+      {
+        "date": "11/6/18",
+        "distance": 10000,
+        "difficulty": 3,
+        "notes": "logan - terrible bike..."
+      },{
+        "date": "11/7/18",
+        "distance": 30000,
+        "difficulty": 4,
+        "notes": "logan - Great bike..."
+      }
+    ],
+    "runs": [
+      {
+        "date": "11/6/18",
+        "distance": 5000,
+        "difficulty": 10,
+        "notes": "logan - terrible run..."
+      },{
+        "date": "11/7/18",
+        "distance": 6000,
+        "difficulty": 4,
+        "notes": "logan - Great run..."
+      }
+    ]
+  },{
+    "id": 3,
+    "name": "Priscilla",
+    "age": 56,
+    "gender": "female",
+    "swims": [
+      {
+        "date": "11/6/18",
+        "distance": 3000,
+        "difficulty": 8,
+        "notes": "priscilla - terrible swim..."
+      },{
+        "date": "11/7/18",
+        "distance": 3500,
+        "difficulty": 8,
+        "notes": "priscilla - Great swim..."
+      }
+    ],
+    "bikes": [
+      {
+        "date": "11/6/18",
+        "distance": 10000,
+        "difficulty": 3,
+        "notes": "priscilla - terrible bike..."
+      },{
+        "date": "11/7/18",
+        "distance": 30000,
+        "difficulty": 4,
+        "notes": "priscilla - Great bike..."
+      }
+    ],
+    "runs": [
+      {
+        "date": "11/6/18",
+        "distance": 5000,
+        "difficulty": 10,
+        "notes": "priscilla - terrible run..."
+      },{
+        "date": "11/7/18",
+        "distance": 6000,
+        "difficulty": 4,
+        "notes": "priscilla - Great run..."
+      }
+    ]
+  }]
+}
