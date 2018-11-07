@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Container } from 'semantic-ui-react';
-import { Image } from 'semantic-ui-react';
-import { Grid } from 'semantic-ui-react';
-import { Segment } from 'semantic-ui-react';
+import { Container, Image, Grid, Segment, Divider } from 'semantic-ui-react';
 import '../App.css';
 
 class Profile extends Component {
@@ -13,16 +10,23 @@ class Profile extends Component {
     return (
       <Container className="profile">
         <h1>Profile</h1>
-        <div className="user-info">
-          <Image src='https://via.placeholder.com/150' size='small' rounded />
-          <Container>
-            <p>Name: FILLER</p>
-            <p>Age: FILLER</p>
-            <p>Gender: FILLER</p>
-          </Container>
-        </div>
-        <div className='ui divider' />
         <Grid divided='vertically'>
+          <Grid.Row columns={3}>
+            <Grid.Column>
+              <div className="user-info">
+                <Image src='https://via.placeholder.com/100' size='small' rounded />
+                <Container>
+                  <p>Name: FILLER</p>
+                  <p>Age: FILLER</p>
+                  <p>Gender: FILLER</p>
+                </Container>
+              </div>
+            </Grid.Column>
+            <Grid.Column>
+            </Grid.Column>
+            <Grid.Column>
+            </Grid.Column>
+          </Grid.Row>
           <Grid.Row columns={3}>
             <Grid.Column>
               <Segment raised>

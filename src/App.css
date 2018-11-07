@@ -44,7 +44,10 @@
 }
 
 /** Swim Styling **/
-
+.header {
+  display: flex;
+  justify-content: space-between;
+}
 
 /** Bike Styling **/
 /** Run Styling **/

@@ -10,12 +10,14 @@ class SwimSummary extends Component {
   render() {
     return (
       <Container>
-        <h1>Swimming</h1>
-        <div>
-          <Image src='https://via.placeholder.com/150' avatar />
-          <span>USERNAME</span>
+        <div className="header">
+          <h1 className="inline">Swimming</h1>
+          <div>
+            <Image src='https://via.placeholder.com/150' avatar />
+            <span>USERNAME</span>
+          </div>
         </div>
-        <Divider hidden />
+        <h3>Your swims</h3>
         <Grid>
           <Grid.Row>
             <Grid.Column width={10}>

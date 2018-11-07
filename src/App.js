@@ -5,8 +5,7 @@ import SwimSummary from './components/swim/SwimSummary';
 import BikeSummary from './components/bike/BikeSummary';
 import RunSummary from './components/run/RunSummary';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react';
-import { Icon } from 'semantic-ui-react'
+import { Menu, Icon } from 'semantic-ui-react';
 import './App.css';
 
 class App extends Component {
@@ -17,6 +16,10 @@ class App extends Component {
       currentUser: [],
     }
   }
+
+  //Log in function
+
+  //Log out function
 
   render() {
     return (

@@ -12,10 +12,10 @@ class SwimList extends Component {
           <Table color='blue' key='blue' striped>
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell width='two' >Number</Table.HeaderCell>
+                <Table.HeaderCell width='one' >Number</Table.HeaderCell>
                 <Table.HeaderCell width='two' >Date</Table.HeaderCell>
-                <Table.HeaderCell width='two' >Distance</Table.HeaderCell>
-                <Table.HeaderCell width='two' >Other</Table.HeaderCell>
+                <Table.HeaderCell width='three' >Distance</Table.HeaderCell>
+                <Table.HeaderCell width='six' >Other</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
 
