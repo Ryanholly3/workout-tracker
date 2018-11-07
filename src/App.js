@@ -25,7 +25,18 @@ class App extends Component {
     });
   }
 
+  selectUser = (user) =>{
+    alert('triggered')
+    this.setState({
+      currentUser: user
+    })
+  }
+
+
   //Log in function
+  logIn = () => {
+
+  }
 
   //Log out function
 
@@ -35,7 +46,7 @@ class App extends Component {
         <Router>
           <div>
             <Menu color="blue" inverted >
-              <Menu.Item as={ Link } name='Login' to='/' users={ this.state.users }>
+              <Menu.Item as={ Link } name='Login' to='/'>
                 <Icon name='user' />
                 Login
               </Menu.Item>
@@ -60,7 +71,11 @@ class App extends Component {
             </Menu>
             <Route exact
               path="/"
-              component={Login}
+              render={(props)=> <Login users={ this.state.users} selectUser ={ this.selectUser }/> }
+            />
+            <Route
+              path="/profile"
+              render={(props)=> <Profile users={ this.state.users }/> }
             />
             <Route
               path="/swim"
@@ -73,10 +88,6 @@ class App extends Component {
             <Route
               path="/run"
               render={(props)=> <RunSummary users={ this.state.users }/> }
-            />
-            <Route
-              path="/profile"
-              render={(props)=> <Profile users={ this.state.users }/> }
             />
           </div>
         </Router>
