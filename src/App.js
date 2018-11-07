@@ -17,6 +17,14 @@ class App extends Component {
     }
   }
 
+  async componentDidMount() {
+    const response = await fetch('/users.json');
+    const json = await response.json();
+    this.setState({
+      users: json,
+    });
+  }
+
   //Log in function
 
   //Log out function
