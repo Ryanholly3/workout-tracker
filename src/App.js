@@ -35,7 +35,7 @@ class App extends Component {
         <Router>
           <div>
             <Menu color="blue" inverted >
-              <Menu.Item as={ Link } name='Login' to='/'>
+              <Menu.Item as={ Link } name='Login' to='/' users={ this.state.users }>
                 <Icon name='user' />
                 Login
               </Menu.Item>
@@ -58,11 +58,26 @@ class App extends Component {
                 </Menu.Item>
               </Menu.Menu>
             </Menu>
-            <Route exact path="/" component={Login}/>
-            <Route exact path="/swim" component={SwimSummary}/>
-            <Route exact path="/bike" component={BikeSummary}/>
-            <Route exact path="/run" component={RunSummary}/>
-            <Route exact path="/profile" component={Profile}/>
+            <Route exact
+              path="/"
+              component={Login}
+            />
+            <Route
+              path="/swim"
+              render={(props)=> <SwimSummary users={ this.state.users }/> }
+            />
+            <Route
+              path="/bike"
+              render={(props)=> <BikeSummary users={ this.state.users }/> }
+            />
+            <Route
+              path="/run"
+              render={(props)=> <RunSummary users={ this.state.users }/> }
+            />
+            <Route
+              path="/profile"
+              render={(props)=> <Profile users={ this.state.users }/> }
+            />
           </div>
         </Router>
       </div>
