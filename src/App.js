@@ -14,6 +14,7 @@ class App extends Component {
     this.state= {
       users: [],
       currentUser: [],
+      loggedIn: false,
     }
   }
 
@@ -26,73 +27,105 @@ class App extends Component {
   }
 
   selectUser = (user) =>{
-    alert('triggered')
     this.setState({
-      currentUser: user
+      currentUser: user,
     })
   }
 
 
-  //Log in function
-  logIn = () => {
-
+  //Log out function
+  logOut = () =>{
+    this.setState({
+      currentUser: [],
+      loggedIn: false
+    })
   }
 
-  //Log out function
+  //Log in, triggered by GO button
+  logIn = () =>{
+    this.setState({
+      loggedIn: true
+    })
+  }
+
+  //Logged In Render
+
+  //Logged Out Render
 
   render() {
-    return (
-      <div className="App">
-        <Router>
-          <div>
-            <Menu color="blue" inverted >
-              <Menu.Item as={ Link } name='Login' to='/'>
-                <Icon name='user' />
-                Login
-              </Menu.Item>
-              <Menu.Item as={ Link } name='Profile' to='/profile'>
-                <Icon name='user' />
-                Profile
-              </Menu.Item>
-              <Menu.Menu position="right">
-                <Menu.Item as={ Link } name='Swim' to='/swim'>
+    if(this.state.loggedIn === true){
+      return(
+        <div className="App">
+          <Router>
+            <div>
+              <Menu color="blue" inverted >
+                <Menu.Item as={ Link } name='Login' to='/' onClick={ this.logOut } >
                   <Icon name='user' />
-                  Swim
+                  Logout
                 </Menu.Item>
-                <Menu.Item as={ Link } name='Bike' to='/bike'>
+                <Menu.Item as={ Link } name='Profile' to='/profile'>
                   <Icon name='user' />
-                  Bike
+                  Profile
                 </Menu.Item>
-                <Menu.Item as={ Link } name='Run' to='/run'>
+                <Menu.Menu position="right">
+                  <Menu.Item as={ Link } name='Swim' to='/swim'>
+                    <Icon name='user' />
+                    Swim
+                  </Menu.Item>
+                  <Menu.Item as={ Link } name='Bike' to='/bike'>
+                    <Icon name='user' />
+                    Bike
+                  </Menu.Item>
+                  <Menu.Item as={ Link } name='Run' to='/run'>
+                    <Icon name='user' />
+                    Run
+                  </Menu.Item>
+                </Menu.Menu>
+              </Menu>
+              <Route exact
+                path="/"
+                render={(props)=> <Login users={ this.state.users } selectUser ={ this.selectUser } loggedIn = { this.state.loggedIn }/> }
+              />
+              <Route
+                path="/profile"
+                render={(props)=> <Profile users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+              />
+              <Route
+                path="/swim"
+                render={(props)=> <SwimSummary users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+              />
+              <Route
+                path="/bike"
+                render={(props)=> <BikeSummary users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+              />
+              <Route
+                path="/run"
+                render={(props)=> <RunSummary users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+              />
+            </div>
+          </Router>
+        </div>
+      );
+    } else if (this.state.loggedIn === false) {
+      return (
+        <div className="App">
+          <Router>
+            <div>
+              <Menu color="blue" inverted >
+                <Menu.Item as={ Link } name='Login' to='/'>
                   <Icon name='user' />
-                  Run
+                  Login
                 </Menu.Item>
-              </Menu.Menu>
-            </Menu>
-            <Route exact
-              path="/"
-              render={(props)=> <Login users={ this.state.users} selectUser ={ this.selectUser }/> }
-            />
-            <Route
-              path="/profile"
-              render={(props)=> <Profile users={ this.state.users }/> }
-            />
-            <Route
-              path="/swim"
-              render={(props)=> <SwimSummary users={ this.state.users }/> }
-            />
-            <Route
-              path="/bike"
-              render={(props)=> <BikeSummary users={ this.state.users }/> }
-            />
-            <Route
-              path="/run"
-              render={(props)=> <RunSummary users={ this.state.users }/> }
-            />
-          </div>
-        </Router>
-      </div>
-    );
+              </Menu>
+              <Route exact
+                path="/"
+                render={(props)=> <Login users={ this.state.users } selectUser ={ this.selectUser } logIn={ this.logIn } loggedIn = { this.state.loggedIn }/> }
+              />
+            </div>
+          </Router>
+        </div>
+      );
+    }
   }
 }
 

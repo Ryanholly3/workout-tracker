@@ -56,7 +56,7 @@ class Profile extends Component {
         </Grid>
       </Container>
     );
-  }
+  }  
 }
 
 export default Profile;
