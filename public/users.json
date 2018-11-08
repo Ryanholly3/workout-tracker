@@ -3,16 +3,17 @@
     "name": "Ryan",
     "age": 26,
     "gender": "male",
+    "weight": 170,
     "image": "",
     "swims": [
       {
-        "swimId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 3000,
         "difficulty": 8,
         "notes": "ryan - terrible swim..."
       },{
-        "swimId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 3500,
         "difficulty": 8,
@@ -21,13 +22,13 @@
     ],
     "bikes": [
       {
-        "bikeId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 10000,
         "difficulty": 3,
         "notes": "ryan - terrible bike..."
       },{
-        "bikeId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 30000,
         "difficulty": 4,
@@ -36,13 +37,13 @@
     ],
     "runs": [
       {
-        "runId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 5000,
         "difficulty": 10,
         "notes": "ryan - terrible run..."
       },{
-        "runId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 6000,
         "difficulty": 4,
@@ -54,16 +55,17 @@
     "name": "Logan",
     "age": 25,
     "gender": "male",
+    "weight": 160,
     "image": "",
     "swims": [
       {
-        "swimId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 3000,
         "difficulty": 8,
         "notes": "logan - terrible swim..."
       },{
-        "swimId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 3500,
         "difficulty": 8,
@@ -72,13 +74,13 @@
     ],
     "bikes": [
       {
-        "bikeId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 10000,
         "difficulty": 3,
         "notes": "logan - terrible bike..."
       },{
-        "bikeId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 30000,
         "difficulty": 4,
@@ -87,13 +89,13 @@
     ],
     "runs": [
       {
-        "runId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 5000,
         "difficulty": 10,
         "notes": "logan - terrible run..."
       },{
-        "runId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 6000,
         "difficulty": 4,
@@ -105,16 +107,17 @@
     "name": "Priscilla",
     "age": 56,
     "gender": "female",
+    "weight": 150,
     "image": "",
     "swims": [
       {
-        "swimId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 3000,
         "difficulty": 8,
         "notes": "priscilla - terrible swim..."
       },{
-        "swimId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 3500,
         "difficulty": 8,
@@ -123,13 +126,13 @@
     ],
     "bikes": [
       {
-        "bikeId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 10000,
         "difficulty": 3,
         "notes": "priscilla - terrible bike..."
       },{
-        "bikeId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 30000,
         "difficulty": 4,
@@ -138,13 +141,13 @@
     ],
     "runs": [
       {
-        "runId": 1,
+        "id": 1,
         "date": "11/6/18",
         "distance": 5000,
         "difficulty": 10,
         "notes": "priscilla - terrible run..."
       },{
-        "runId": 2,
+        "id": 2,
         "date": "11/7/18",
         "distance": 6000,
         "difficulty": 4,

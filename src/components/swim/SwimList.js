@@ -7,7 +7,7 @@ import '../../App.css';
 class SwimList extends Component {
 
   swimItem(){
-    return this.props.currentUser[0].swims.map((swim, i)=> <SwimItem key={i} id={ swim.swimId } date={ swim.date } distance={ swim.distance } notes={ swim.notes }/>)
+    return this.props.currentUser[0].swims.map((swim, i)=> <SwimItem key={i} id={ swim.id } date={ swim.date } distance={ swim.distance } notes={ swim.notes }/>)
   }
 
   render() {
