@@ -32,8 +32,6 @@ class App extends Component {
     })
   }
 
-
-  //Log out function
   logOut = () =>{
     this.setState({
       currentUser: [],
@@ -47,10 +45,6 @@ class App extends Component {
       loggedIn: true
     })
   }
-
-  //Logged In Render
-
-  //Logged Out Render
 
   render() {
     if(this.state.loggedIn === true){
@@ -88,7 +82,7 @@ class App extends Component {
               />
               <Route
                 path="/profile"
-                render={(props)=> <Profile users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+                render={(props)=> <Profile users={ this.state.users } currentUser={ this.state.currentUser } loggedIn = { this.state.loggedIn }/> }
               />
               <Route
                 path="/swim"

@@ -16,9 +16,9 @@ class Profile extends Component {
               <div className="user-info">
                 <Image src='https://via.placeholder.com/100' size='small' rounded />
                 <Container>
-                  <p>Name: FILLER</p>
-                  <p>Age: FILLER</p>
-                  <p>Gender: FILLER</p>
+                  <p>Name: { this.props.currentUser[0].name }</p>
+                  <p>Age: { this.props.currentUser[0].age }</p>
+                  <p>Gender: { this.props.currentUser[0].gender }</p>
                 </Container>
               </div>
             </Grid.Column>
@@ -56,7 +56,7 @@ class Profile extends Component {
         </Grid>
       </Container>
     );
-  }  
+  }
 }
 
 export default Profile;
