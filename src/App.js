@@ -86,15 +86,15 @@ class App extends Component {
               />
               <Route
                 path="/swim"
-                render={(props)=> <SwimSummary users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+                render={(props)=> <SwimSummary users={ this.state.users } currentUser={ this.state.currentUser } loggedIn = { this.state.loggedIn }/> }
               />
               <Route
                 path="/bike"
-                render={(props)=> <BikeSummary users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+                render={(props)=> <BikeSummary users={ this.state.users } currentUser={ this.state.currentUser } loggedIn = { this.state.loggedIn }/> }
               />
               <Route
                 path="/run"
-                render={(props)=> <RunSummary users={ this.state.users } loggedIn = { this.state.loggedIn }/> }
+                render={(props)=> <RunSummary users={ this.state.users } currentUser={ this.state.currentUser } loggedIn = { this.state.loggedIn }/> }
               />
             </div>
           </Router>

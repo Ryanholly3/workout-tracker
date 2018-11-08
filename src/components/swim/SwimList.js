@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import SwimItem from './SwimItem';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Container, Table, Menu, Icon } from 'semantic-ui-react';
 import '../../App.css';
 
 class SwimList extends Component {
+
+  swimItem(){
+    return this.props.currentUser[0].swims.map((swim, i)=> <SwimItem key={i} id={ swim.swimId } date={ swim.date } distance={ swim.distance } notes={ swim.notes }/>)
+  }
 
   render() {
     return (
@@ -20,20 +25,9 @@ class SwimList extends Component {
             </Table.Header>
 
             <Table.Body>
-              <Table.Row>
-                <Table.Cell>1</Table.Cell>
-                <Table.Cell>11/6/18</Table.Cell>
-                <Table.Cell>4000 yards</Table.Cell>
-                <Table.Cell>Terrible Swim...</Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>2</Table.Cell>
-                <Table.Cell>11/7/18</Table.Cell>
-                <Table.Cell>3500 yards</Table.Cell>
-                <Table.Cell>Great swim!</Table.Cell>
-              </Table.Row>
+              { this.swimItem() }
             </Table.Body>
-            
+
             <Table.Footer>
               <Table.Row>
                 <Table.HeaderCell colSpan='4'>

@@ -6,6 +6,10 @@ import '../../App.css';
 
 class SwimInput extends Component {
 
+  formSubmit =() =>{
+    //post request
+  }
+
   render() {
     return (
       <Segment raised>
@@ -29,7 +33,7 @@ class SwimInput extends Component {
             label='Notes'
             placeholder='Notes about workout'
           />
-          <Button type='submit'>Submit</Button>
+          <Button type='submit' onClick={ this.formSubmit }>Submit</Button>
         </Form>
       </Segment>
     );
