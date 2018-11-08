@@ -7,6 +7,34 @@ class Profile extends Component {
 
 
   render() {
+    let swimCount = this.props.currentUser[0].swims.length
+    let bikeCount = this.props.currentUser[0].bikes.length
+    let runCount = this.props.currentUser[0].runs.length
+
+    let swimTotalDistance = () =>{
+      let result = 0
+      for(let i = 0; i < swimCount; i++){
+        result += this.props.currentUser[0].swims[i].distance
+      }
+      return result
+    }
+
+    let bikeTotalDistance = () =>{
+      let result = 0
+      for(let i = 0; i < bikeCount; i++){
+        result += this.props.currentUser[0].bikes[i].distance
+      }
+      return result
+    }
+
+    let runTotalDistance = () =>{
+      let result = 0
+      for(let i = 0; i < runCount; i++){
+        result += this.props.currentUser[0].runs[i].distance
+      }
+      return result
+    }
+
     return (
       <Container className="profile">
         <h1>Profile</h1>
@@ -31,24 +59,24 @@ class Profile extends Component {
             <Grid.Column>
               <Segment raised>
                 <h3>Swim Summary</h3>
-                <p>Total Swims: </p>
-                <p>Total miles: </p>
+                <p>Total Swims: {swimCount} </p>
+                <p>Total yards: { swimTotalDistance() }</p>
                 <p>Total calories burnt: </p>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment raised>
                 <h3>Bike Summary</h3>
-                <p>Total Bikes: </p>
-                <p>Total miles: </p>
+                <p>Total Bikes: {bikeCount}</p>
+                <p>Total miles: { bikeTotalDistance() }</p>
                 <p>Total calories burnt: </p>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment raised>
                 <h3>Run Summary</h3>
-                <p>Total Runs: </p>
-                <p>Total miles: </p>
+                <p>Total Runs: {runCount}</p>
+                <p>Total miles: { runTotalDistance() }</p>
                 <p>Total calories burnt: </p>
               </Segment>
             </Grid.Column>

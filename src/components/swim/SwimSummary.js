@@ -13,7 +13,7 @@ class SwimSummary extends Component {
         <div className="header">
           <h1 className="inline">Swimming</h1>
           <div>
-            <Image src='https://via.placeholder.com/150' avatar />
+            <Image src='https://via.placeholder.com/150' avatar size="tiny"/>
             <span>USERNAME</span>
           </div>
         </div>
