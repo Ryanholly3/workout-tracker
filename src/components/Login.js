@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
-import { Select } from 'semantic-ui-react';
+import { Button, Select } from 'semantic-ui-react';
 import '../App.css';
 
 class Login extends Component {
