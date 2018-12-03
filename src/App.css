@@ -1,9 +1,16 @@
+/** NavBar Styling **/
+
+.ui.menu {
+  margin: 0;
+}
 
 /** Login Styling **/
 
 .login-page {
+  background: url('/track.jpg') no-repeat center center fixed;
+  background-size: cover;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

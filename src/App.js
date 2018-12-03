@@ -52,7 +52,7 @@ class App extends Component {
         <div className="App">
           <Router>
             <div>
-              <Menu color="blue" inverted >
+              <Menu color="blue" inverted>
                 <Menu.Item as={ Link } name='Login' to='/' onClick={ this.logOut } >
                   <Icon name='user' />
                   Logout
